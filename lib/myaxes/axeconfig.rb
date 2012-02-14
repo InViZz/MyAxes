@@ -19,7 +19,7 @@ class AxeConfig < Hash
     puts "Configfile (#{config}) not found" unless File.readable?(config)
 
     begin
-      @config = YAML.load_file(config)
+      @config = YAML.load_file(File.expand_path(config))
     rescue Exception => errmsg
       puts "Configfile format error: #{errmsg}"
     end

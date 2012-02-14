@@ -9,7 +9,7 @@ class MyAxes
 
   include Log4r
 
-  def initialize(config='~/.myaxes.yml')
+  def initialize(config='~/.myaxes')
     @logger = Logger.new('MyAxes')
     @logger.outputters = Outputter.stdout
 
